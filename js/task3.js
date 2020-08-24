@@ -22,9 +22,8 @@ const images = [
   const list = document.querySelector('#gallery');
   list.classList.add('gallery');
 
-  const itemList = images.map(el => list.insertAdjacentHTML('beforeend', `<li><img src="${el.url}" alt="${el.alt}"></img></li>`));
+  const itemList = images.reduce((acc, el) => acc + `<li><img src="${el.url}" alt="${el.alt}"></img></li>`, "");
+  list.insertAdjacentHTML("beforeend", itemList);
 
-  // const itemList = images.map(el => `<li><img src="${el.url}" alt="${el.alt}"></img></li>`);
-
-  // list.insertAdjacentHTML('beforeend', itemList);
+// const itemList = images.forEach(el => list.insertAdjacentHTML('beforeend', `<li><img src="${el.url}" alt="${el.alt}"></img></li>`));
   

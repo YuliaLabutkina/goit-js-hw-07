@@ -10,11 +10,21 @@ const ingredients = [
   ];
 
   const listVegetables = document.querySelector('#ingredients');
+  const fragment = document.createDocumentFragment();
 
-  const ingredientsList = ingredients.map(el => {
+  const ingredientsList = ingredients.forEach(el => {
     const list = document.createElement('li');
     list.textContent = el;
-    return list;
+    fragment.appendChild(list);
   });
+
+  listVegetables.appendChild(fragment);
+
+
+  // const ingredientsList = ingredients.map(el => {
+  //   const list = document.createElement('li');
+  //   list.textContent = el;
+  //   return list;
+  // });
   
-  listVegetables.append(...ingredientsList);
+  // listVegetables.append(...ingredientsList);

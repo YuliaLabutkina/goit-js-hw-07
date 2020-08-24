@@ -23,7 +23,6 @@ console.groupEnd();
 //     Категория: ${titles.textContent}
 //     Количество элементов: ${elements.length}
 //     `);
-
 // });
 
 // categories(numberCategories);
