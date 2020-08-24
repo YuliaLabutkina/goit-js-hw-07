@@ -1,0 +1,44 @@
+.container {
+  margin: 0 20px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.task {
+  font-size: 20px;
+  font-weight: 800;
+  color: blue;
+  margin: 20px 10px;
+}
+
+li {
+  list-style: none;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.gallery li:not(:last-child) {
+  margin-right: 20px;
+}
+
+#validation-input {
+    border: 3px solid #bdbdbd;
+  }
+  
+  #validation-input.valid {
+    border-color: #4caf50;
+  }
+  
+  #validation-input.invalid {
+    border-color: #f44336;
+  }
+
+
+  
