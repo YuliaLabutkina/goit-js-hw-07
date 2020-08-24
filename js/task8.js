@@ -18,7 +18,7 @@ function getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
   }
 
-  
+
 const createBoxes = (amount) => {
 
     for (let i = 0; i < amount; i += 1) {
@@ -34,8 +34,11 @@ const createBoxes = (amount) => {
 
 }
 
-const destroyBoxes = () => boxRender.forEach(el => boxes.removeChild(el));
-
+const destroyBoxes = () => {
+    const boxRender = document.querySelectorAll("div#boxes div");
+    boxRender.forEach((el) => boxes.removeChild(el));
+  };
+  
 
 render.addEventListener("click", () => {
     createBoxes(input.value);
