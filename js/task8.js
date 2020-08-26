@@ -4,9 +4,6 @@ const input = document.querySelector('input[type="number"]');
 const render = document.querySelector('button[data-action="render"]');
 const destroy = document.querySelector('button[data-action="destroy"]');
 const boxes = document.querySelector('div#boxes');
-let r = 0;
-let g = 0;
-let b = 0;
 
 
 function createBox(size) {
@@ -16,17 +13,10 @@ function createBox(size) {
 };
 
 
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
-};
-
-
 function getRgb() {
-  r = getRandomIntInclusive(0, 255);
-  g = getRandomIntInclusive(0, 255);
-  b = getRandomIntInclusive(0, 255);
+  let r = Math.floor(Math.random()*256);
+  let g = Math.floor(Math.random()*256);
+  let b = Math.floor(Math.random()*256);
   return `rgb(${r}, ${g}, ${b})`;
 };
 
